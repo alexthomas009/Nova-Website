@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Privacy Policy for Nova, the student daily tracker.">
+  <title>Privacy Policy - Nova App</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+  <div class="background-elements">
+    <div class="spiral-bg"></div>
+    <div class="spiral-particles"></div>
+    <div class="core-glow"></div>
+  </div>
+
+  <nav>
+    <a href="index.html" class="logo-container">
+      <video src="nova-animation.mp4" class="nav-logo" autoplay loop muted playsinline></video>
+      <span class="logo-text">Nova</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="privacy-policy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </div>
+  </nav>
+
+  <div class="policy-container">
+    <h1>Privacy Policy</h1>
+    <p><strong>Last Updated:</strong> April 18, 2026</p>
+    
+    <p>Welcome to Nova. We are committed to protecting your privacy and ensuring a safe environment for all our users, especially children and students. This Privacy Policy outlines our practices regarding data collection and usage, in strict compliance with the Google Play Families Policy, Apple's App Store Guidelines for Kids, the Children’s Online Privacy Protection Act (COPPA), and the General Data Protection Regulation (GDPR-K).</p>
+
+    <h2>1. Data Collection & Age Boundaries</h2>
+    <p>Nova is designed as a student productivity tool supporting users from age 10 to 30+. We have designed our app to prioritize data minimization and precise parental controls perfectly suited for each age bracket:</p>
+    <ul>
+      <li><strong>Ages 10-14 (Explorer Tier):</strong> Mandatory parental monitoring is built-in. Parents are kept fully informed of the child's usage inside the app. No location mapping or tracking of external behavior is done.</li>
+      <li><strong>Ages 18 and older:</strong> Parental controls are entirely optional and fully student-controlled.</li>
+      <li><strong>No Location Data:</strong> We do not track or collect precise location mapping.</li>
+    </ul>
+
+    <h2>2. Third-Party Services and SDKs</h2>
+    <p>We do not use any third-party analytics or advertising Software Development Kits (SDKs) that process user data or display interest-based advertising. Ensure peace of mind knowing that there are no third-party trackers monitoring your child's behavior.</p>
+
+    <h2>3. Payments and Financial Data</h2>
+    <p>For users purchasing premium features or subscriptions, we utilize the secure payment infrastructure provided by Apple and Google. Nova does not directly collect, process, or store your credit card or financial information. Any payment data is securely handled by the respective app stores under their privacy guidelines.</p>
+
+    <h2>4. Parental Rights</h2>
+    <p>As a parent or guardian, you have full control over your child's data. Because all study data is stored locally on the device, you can instantly review or delete all information by simply unenstalling the app or clearing the app data in your device settings. If you have questions regarding data privacy, please contact us.</p>
+
+    <h2>5. Advertising</h2>
+    <p>Nova is entirely ad-free. We do not display any advertisements to children, ensuring an uninterrupted and completely safe digital environment.</p>
+
+    <h2>6. Changes to this Policy</h2>
+    <p>We may update this Privacy Policy periodically. Any significant changes will be communicated either via an update note in the App Store/Google Play Store or through a notice on this website.</p>
+
+    <h2>7. Contact Us</h2>
+    <p>If you have any questions, concerns, or requests regarding this Privacy Policy, please contact us at:</p>
+    <p><strong>Email:</strong> privacy@nova-app.example.com</p>
+  </div>
+
+  <footer>
+    <div class="footer-links">
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="contact.html">Contact Support</a>
+    </div>
+    <p class="copyright">&copy; <span id="year"></span> Nova App. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Intersection Observer for scroll animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.policy-container').forEach(el => {
+      el.classList.add('animate-on-scroll');
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>

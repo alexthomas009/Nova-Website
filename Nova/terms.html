@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Terms of Service for Nova, the student daily tracker.">
+  <title>Terms of Service - Nova App</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+  <div class="background-elements">
+    <div class="spiral-bg"></div>
+    <div class="spiral-particles"></div>
+    <div class="core-glow"></div>
+  </div>
+
+  <nav>
+    <a href="index.html" class="logo-container">
+      <video src="nova-animation.mp4" class="nav-logo" autoplay loop muted playsinline></video>
+      <span class="logo-text">Nova</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="privacy-policy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </div>
+  </nav>
+
+  <div class="policy-container">
+    <h1>Terms of Service</h1>
+    <p><strong>Last Updated:</strong> April 18, 2026</p>
+    
+    <p>Welcome to Nova! These Terms of Service govern your use of the Nova mobile application and website.</p>
+
+    <h2>1. Acceptance of Terms</h2>
+    <p>By downloading or using the Nova app, you agree to be bound by these Terms. <strong>If you are under 18 years old (or the age of legal majority where you live), you may only use Nova under the supervision of a parent or legal guardian who agrees to be bound by these Terms.</strong></p>
+
+    <h2>2. Purpose of the App</h2>
+    <p>Nova is a digital tool intended to help students track study habits and daily routines. The virtual rewards (e.g., 'Stars', 'Badges') earned within the app have no real-world monetary value and cannot be exchanged for cash or prizes.</p>
+
+    <h2>3. User Conduct</h2>
+    <p>You agree to use Nova only for lawful purposes. You shall not attempt to reverse engineer, hack, or exploit the app's reward mechanics or underlying code.</p>
+
+    <h2>4. Payments and Subscriptions</h2>
+    <p>Nova may offer premium features which require payment or a subscription. All transactions, including subscriptions and one-time purchases, are processed securely through the respective app store (Apple App Store or Google Play Store) and are subject to their terms of service and payment policies. Subscription auto-renewals, cancellations, and refunds are managed entirely by your app store account settings.</p>
+
+    <h2>5. Disclaimers</h2>
+    <p>Nova is provided on an "AS IS" and "AS AVAILABLE" basis. While we strive to provide uninterrupted service, we do not guarantee that the app will always be error-free or available at all times.</p>
+
+    <h2>6. Termination</h2>
+    <p>We reserve the right to suspend or terminate app access if we discover a breach of these Terms. Since data is local, uninstalling the app permanently deletes your local data.</p>
+
+    <h2>7. Contact Information</h2>
+    <p>For questions about these terms, please contact us:</p>
+    <p><strong>Email:</strong> support@nova-app.example.com</p>
+  </div>
+
+  <footer>
+    <div class="footer-links">
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="contact.html">Contact Support</a>
+    </div>
+    <p class="copyright">&copy; <span id="year"></span> Nova App. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Intersection Observer for scroll animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.policy-container').forEach(el => {
+      el.classList.add('animate-on-scroll');
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>

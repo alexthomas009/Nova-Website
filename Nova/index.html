@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nova - The ultimate study tracker and career guide for every student's journey.">
+  <title>Nova App - Plan, Track, & Achieve Your Goals</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="logo.png">
+</head>
+<body>
+  
+  <div class="background-elements">
+    <div class="spiral-bg"></div>
+    <div class="spiral-particles"></div>
+    <div class="core-glow"></div>
+  </div>
+
+  <nav>
+    <a href="index.html" class="logo-container">
+      <video src="nova-animation.mp4" class="nav-logo" autoplay loop muted playsinline></video>
+      <span class="logo-text">Nova</span>
+    </a>
+    <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#screenshots">App Preview</a>
+      <a href="privacy-policy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">Your Journey. <br><span>Personalised.</span></h1>
+      <p class="hero-description">Nova guides students from middle school through university. With study planning, career guidance, and university matching, your future is in your hands.</p>
+      <div class="store-buttons">
+        <a href="#" class="cta-button">App Store</a>
+        <a href="#" class="cta-button">Google Play</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="screenshot1.png" alt="Nova App Interface" class="app-mockup" onerror="this.src='mockup.png'">
+    </div>
+  </section>
+
+  <section id="features" class="features">
+    <h2 class="section-title animate-on-scroll">Built for Every Student's Journey</h2>
+    <div class="feature-grid">
+      <div class="feature-card animate-on-scroll">
+        <div class="feature-icon">📖</div>
+        <h3 class="feature-title">Study Planning</h3>
+        <p class="feature-desc">Smart daily plans tailored to your goals and pace to help you succeed.</p>
+      </div>
+      <div class="feature-card animate-on-scroll">
+        <div class="feature-icon">💼</div>
+        <h3 class="feature-title">Career Guidance</h3>
+        <p class="feature-desc">Explore professional paths that perfectly match your strengths and interests.</p>
+      </div>
+      <div class="feature-card animate-on-scroll">
+        <div class="feature-icon">🏛️</div>
+        <h3 class="feature-title">University Matching</h3>
+        <p class="feature-desc">Find your dream universities that fit your profile and ambitions, set your intake dates, and prepare.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="screenshots" class="screenshots-section">
+    <div class="screenshots-glass-container">
+      <h2 class="section-title">Personalised for Your Age</h2>
+      <p style="text-align: center; color: var(--text-secondary); margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto;">Whether you are an Explorer (Ages 10-14), an Achiever (Ages 15-22), or a Visionary (Ages 23-30), Nova adapts to you.</p>
+      
+      <div class="screenshot-gallery">
+        <img src="splash.png" alt="StudyPath Splash" class="gallery-img" onerror="this.style.display='none'">
+        <img src="login.png" alt="Let's Find Your Path" class="gallery-img" onerror="this.style.display='none'">
+        <img src="journey.png" alt="Student Journey" class="gallery-img" onerror="this.style.display='none'">
+        <img src="age.png" alt="Personalised Tiers" class="gallery-img" onerror="this.style.display='none'">
+        <img src="safety.png" alt="Safety Built In" class="gallery-img" onerror="this.style.display='none'">
+      </div>
+    </div>
+  </section>
+
+  <section class="safety-section animate-on-scroll">
+    <div class="policy-container">
+      <h2>Safety Built In.</h2>
+      <p>Peace of mind for families. Nova includes <strong>mandatory parental monitoring</strong> for students aged 10-14 to keep families informed. From age 18 onwards, parental controls become fully optional and student-controlled.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-links">
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="contact.html">Contact Support</a>
+    </div>
+    <p class="copyright">&copy; <span id="year"></span> Nova App. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Intersection Observer for scroll animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.animate-on-scroll').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
